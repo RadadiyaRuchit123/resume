@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruchit Radadiya | Curriculum Vitae - Shopify Frontend Developer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+      }
+      .cv-container {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased py-8 sm:py-12 px-4 selection:bg-emerald-500 selection:text-white">
+
+  <!-- Top Action Bar (hidden when printing) -->
+  <div class="max-w-4xl mx-auto mb-6 flex items-center justify-between no-print">
+    <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-emerald-600 transition-colors">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      <span>Back to Portfolio Website</span>
+    </a>
+
+    <div class="flex items-center gap-3">
+      <button onclick="window.print()" class="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white shadow-sm flex items-center gap-2 transition-all">
+        <i data-lucide="printer" class="w-4 h-4"></i>
+        <span>Print / Save as PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- CV Paper Container -->
+  <main class="cv-container max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-200 p-8 sm:p-12">
+    
+    <!-- Header -->
+    <header class="border-b border-slate-200 pb-8 mb-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Ruchit Radadiya</h1>
+          <p class="text-base font-bold text-emerald-700 mt-1 uppercase tracking-wide">Web Designer & Shopify Frontend Developer</p>
+          <p class="text-xs text-slate-500 mt-1">Gujarat, India · Available Worldwide (Remote / Relocation)</p>
+        </div>
+
+        <div class="text-xs space-y-1.5 sm:text-right text-slate-600">
+          <div class="flex sm:justify-end items-center gap-2">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <a href="mailto:ruchitradadiya123@gmail.com" class="font-medium text-slate-900 hover:text-emerald-600">ruchitradadiya123@gmail.com</a>
+          </div>
+          <div class="flex sm:justify-end items-center gap-2">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <a href="tel:+917490810349" class="font-medium text-slate-900 hover:text-emerald-600">(+91) 74908 10349</a>
+          </div>
+          <div class="flex sm:justify-end items-center gap-2">
+            <i data-lucide="globe" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <a href="https://linkedin.com" target="_blank" class="font-medium text-slate-900 hover:text-emerald-600">linkedin.com</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Profile Summary -->
+    <section class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-800 border-b border-emerald-100 pb-1 mb-3 flex items-center gap-2">
+        <i data-lucide="user" class="w-4 h-4"></i>
+        <span>Profile Summary</span>
+      </h2>
+      <p class="text-sm text-slate-700 leading-relaxed text-justify">
+        Creative and detail-oriented Shopify Frontend Designer with 2.7 years of hands-on experience in Horizon and Dawn theme customization. Skilled in Liquid, HTML, CSS, and JavaScript, delivering responsive, conversion-focused Shopify stores. Experienced in creating custom sections, blocks, and UI components while optimizing design for performance and SEO. Skilled in responsive design, UI/UX principles, and front-end development for seamless user experiences. Proficient in design tools like Figma, Adobe XD, and Sketch to create visually appealing interfaces. Strong problem-solving abilities and a passion for delivering high-quality, optimized web solutions.
+      </p>
+    </section>
+
+    <!-- Work Experience -->
+    <section class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-800 border-b border-emerald-100 pb-1 mb-4 flex items-center gap-2">
+        <i data-lucide="briefcase" class="w-4 h-4"></i>
+        <span>Work Experience</span>
+      </h2>
+
+      <!-- Role 1: Tech Rabbit -->
+      <div class="mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+          <div>
+            <h3 class="text-base font-bold text-slate-900">Tech Rabbit</h3>
+            <p class="text-xs font-semibold text-emerald-700">Shopify Frontend Developer</p>
+          </div>
+          <span class="text-xs font-mono font-medium text-slate-500">Oct 2025 – Present</span>
+        </div>
+        <ul class="list-disc list-outside ml-4 mt-2 space-y-1.5 text-xs text-slate-700 leading-relaxed">
+          <li>Developing custom Shopify sections and blocks using Liquid, HTML5, CSS3, and modern JavaScript.</li>
+          <li>Customizing Horizon and Dawn themes for high-growth direct-to-consumer and international retail clients.</li>
+          <li>Engineering conversion-optimized UI elements including AJAX cart drawers, sticky add-to-bag, and responsive product grids.</li>
+          <li>Auditing and optimizing store performance to achieve fast page loads and adhere to Google Core Web Vitals guidelines.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2: Tsomo Spring Solutions -->
+      <div>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+          <div>
+            <h3 class="text-base font-bold text-slate-900">Tsomo Spring Solutions</h3>
+            <p class="text-xs font-semibold text-emerald-700">Shopify Frontend Developer & Web Designer</p>
+          </div>
+          <span class="text-xs font-mono font-medium text-slate-500">Apr 2024 – Oct 2025</span>
+        </div>
+        <ul class="list-disc list-outside ml-4 mt-2 space-y-1.5 text-xs text-slate-700 leading-relaxed">
+          <li>Created visually appealing UI/UX layouts, ensuring an intuitive, user-friendly customer experience.</li>
+          <li>Developed custom Shopify sections and blocks using Liquid, HTML, CSS, and JavaScript.</li>
+          <li>Converted Figma, Adobe XD, or Sketch designs into fully functional, pixel-perfect web pages.</li>
+          <li>Optimized website performance by improving load times and adhering to SEO best practices.</li>
+          <li>Collaborated directly with developers and marketing teams to enhance user engagement.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Key Live Shopify Storefronts Reference -->
+    <section class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-800 border-b border-emerald-100 pb-1 mb-3 flex items-center gap-2">
+        <i data-lucide="layers" class="w-4 h-4"></i>
+        <span>Live Shopify Theme Development Projects (11 Storefronts)</span>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>Amrut Pushti (India 🇮🇳)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">amrutpushti.com</span>
+          </div>
+          <p class="text-slate-600 mt-1">Superfoods D2C storefront with custom product/benefit sections and conversion grid.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>Monorex (India 🇮🇳)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">monorex.in</span>
+          </div>
+          <p class="text-slate-600 mt-1">Large kitchenware catalogue with metal/utility filtering and combo bundles.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>Kraft Karat (India 🇮🇳)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">kraftkarat.com</span>
+          </div>
+          <p class="text-slate-600 mt-1">Fashion jewellery storefront with custom category banners & testimonials.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>SSWAI (India 🇮🇳)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">sswai.co.in</span>
+          </div>
+          <p class="text-slate-600 mt-1">Editorial-style women's fashion with custom collection tiles & lookbooks.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>The House of Kundan (India 🇮🇳)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">thehouseofkundan.com</span>
+          </div>
+          <p class="text-slate-600 mt-1">Handcrafted bridal jewellery with bespoke 'Made to Order' block and inventory logic.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>Lumvia (Canada 🇨🇦)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">lumvia.ca</span>
+          </div>
+          <p class="text-slate-600 mt-1">Canadian ceramic tableware with early pre-launch catalogue and newsletter capture.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>Appointed (USA 🇺🇸)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">appointed.co</span>
+          </div>
+          <p class="text-slate-600 mt-1">American stationery brand theme sections for planners, calendars and desktop goods.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>ka-pok (Hong Kong 🇭🇰)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">ka-pok.com</span>
+          </div>
+          <p class="text-slate-600 mt-1">Large multi-brand storefront supporting 340+ international designer brands.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>A. Society (Hong Kong 🇭🇰)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">asociety.com</span>
+          </div>
+          <p class="text-slate-600 mt-1">Eyewear brand with shape/material filters and made-to-order customiser page.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>Ava & May (Germany 🇩🇪)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">ava-may.de</span>
+          </div>
+          <p class="text-slate-600 mt-1">Berlin home fragrance brand with scent-family navigation and bundle builder.</p>
+        </div>
+
+        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+          <div class="font-bold text-slate-900 flex items-center justify-between">
+            <span>Cloud Adventures (Slovakia 🇸🇰)</span>
+            <span class="text-[11px] text-emerald-600 font-mono">cloudadventures.sk</span>
+          </div>
+          <p class="text-slate-600 mt-1">Shopify flight booking platform with interactive airport-picker.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Grid -->
+    <section class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-800 border-b border-emerald-100 pb-1 mb-3 flex items-center gap-2">
+        <i data-lucide="cpu" class="w-4 h-4"></i>
+        <span>Technical Skills & Tools</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1.5">Shopify & CMS:</h3>
+          <p class="text-slate-700 leading-relaxed">
+            Shopify OS 2.0, Liquid Templating, Dawn & Horizon Theme Customization, Custom Sections & Blocks, Schema Settings, Cart Drawer, WordPress (Basic).
+          </p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1.5">Frontend Technologies:</h3>
+          <p class="text-slate-700 leading-relaxed">
+            HTML, HTML5, CSS, CSS3, JavaScript (ES6+), jQuery, Bootstrap, Tailwind CSS, Responsive Web Design, SEO Best Practices.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-bold text-slate-900 mb-1.5">Design & Code Tools:</h3>
+          <p class="text-slate-700 leading-relaxed">
+            Figma, Adobe XD, Sketch, Sublime Text, VS Code, Git / GitHub, Chrome DevTools.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Spoken Languages -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2 border-t border-slate-200">
+      <section>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-2 flex items-center gap-2">
+          <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+          <span>Education</span>
+        </h2>
+        <div>
+          <div class="font-bold text-sm text-slate-900">BSc (Microbiology)</div>
+          <div class="text-xs text-slate-600 font-medium">Gujarat University</div>
+          <div class="text-xs text-slate-500">2019 – 2021</div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-2 flex items-center gap-2">
+          <i data-lucide="languages" class="w-4 h-4"></i>
+          <span>Spoken Languages</span>
+        </h2>
+        <div class="text-xs space-y-1 text-slate-700">
+          <div><span class="font-semibold text-slate-900">English:</span> Professional Working Proficiency</div>
+          <div><span class="font-semibold text-slate-900">Hindi:</span> Fluent</div>
+          <div><span class="font-semibold text-slate-900">Gujarati:</span> Native</div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
+

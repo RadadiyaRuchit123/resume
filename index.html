@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruchit Radadiya | Shopify Frontend Developer & Web Designer</title>
+  <meta name="description" content="Shopify Frontend Developer & Web Designer with 11+ live international storefronts. Specialized in Shopify OS 2.0, Liquid, Dawn/Horizon themes, custom sections, and Figma-to-Shopify conversion.">
+  <meta name="author" content="Ruchit Radadiya">
+
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:title" content="Ruchit Radadiya | Shopify Frontend Developer Portfolio">
+  <meta property="og:description" content="Explore 11 live Shopify storefronts across India, USA, Canada, Germany, Hong Kong, and Slovakia. Custom Liquid sections, blocks & high-converting UX.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            shopify: {
+              DEFAULT: '#10b981',
+              light: '#34d399',
+              dark: '#059669',
+            },
+            dark: {
+              900: '#090d16',
+              850: '#0d1322',
+              800: '#111827',
+              700: '#1f2937',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#090d16] text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+
+  <!-- Ambient Light Accents -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#090d16]/85 border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-emerald-950 group-hover:scale-105 transition-transform">
+          RR
+        </div>
+        <div>
+          <span class="text-base font-bold text-white tracking-tight block group-hover:text-emerald-400 transition-colors">
+            Ruchit Radadiya
+          </span>
+          <span class="text-[11px] text-slate-400 font-medium tracking-wider uppercase block">
+            Shopify Frontend Dev
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#projects" class="nav-link hover:text-emerald-400 transition-colors">Projects (11)</a>
+        <a href="#skills" class="nav-link hover:text-emerald-400 transition-colors">Shopify Skills</a>
+        <a href="#experience" class="nav-link hover:text-emerald-400 transition-colors">Experience & CV</a>
+        <a href="#code-showcase" class="nav-link hover:text-emerald-400 transition-colors">Liquid Code</a>
+        <a href="#process" class="nav-link hover:text-emerald-400 transition-colors">Process</a>
+        <a href="#contact" class="nav-link hover:text-emerald-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button onclick="toggleTheme()" aria-label="Toggle Dark/Light Mode" class="w-10 h-10 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700/60 flex items-center justify-center transition-colors">
+          <i id="theme-toggle-icon" data-lucide="sun" class="w-4 h-4"></i>
+        </button>
+
+        <!-- View Full CV Button -->
+        <a href="resume.html" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 transition-all">
+          <i data-lucide="file-text" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>View CV</span>
+        </a>
+
+        <!-- Hire Me CTA -->
+        <a href="#contact" class="btn-shine inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-md shadow-emerald-950 transition-all">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>Let's Talk</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center border border-slate-700">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Nav -->
+    <div id="mobile-nav" class="hidden md:hidden px-4 pt-3 pb-6 bg-[#090d16] border-b border-slate-800 space-y-3">
+      <a href="#projects" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium">Projects (11 Live Stores)</a>
+      <a href="#skills" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium">Shopify Skills</a>
+      <a href="#experience" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium">Experience & Resume</a>
+      <a href="#code-showcase" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium">Liquid Architecture</a>
+      <a href="#process" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium">Workflow Process</a>
+      <a href="#contact" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white text-sm font-medium">Contact & Hire</a>
+      <div class="pt-2 border-t border-slate-800 flex gap-2">
+        <a href="resume.html" target="_blank" class="flex-1 text-center py-2.5 rounded-lg bg-slate-800 text-xs font-semibold text-white">View Full CV</a>
+        <a href="#contact" class="flex-1 text-center py-2.5 rounded-lg bg-emerald-600 text-xs font-bold text-white">Hire Ruchit</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Live Availability Pill -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-semibold mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-circle"></span>
+          <span>Available for Freelance Projects & Full-Time E-Commerce Roles</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
+          Building High-Converting, Custom <span class="gradient-text-emerald">Shopify Storefronts</span> for Global Brands.
+        </h1>
+
+        <!-- Subtitle & Role Explanation -->
+        <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto mb-10">
+          I'm <strong class="text-white font-semibold">Ruchit Radadiya</strong>, a Web Designer and Shopify Frontend Developer with <span class="text-emerald-400 font-bold">2.7+ years of experience</span> specializing in 
+          <span class="text-emerald-400 font-medium">Shopify OS 2.0</span>, custom <span class="text-emerald-400 font-medium">Liquid</span> sections/blocks, 
+          and converting Figma designs into responsive, conversion-focused e-commerce stores across 
+          <span class="text-amber-300 font-medium">India, USA, Canada, Germany, Hong Kong & Slovakia</span>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+          <a href="#projects" class="btn-shine px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-xl shadow-emerald-950 flex items-center gap-2 transition-all">
+            <span>Explore 11 Live Stores</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+
+          <a href="resume.html" target="_blank" class="px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 hover:text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700 flex items-center gap-2 transition-all">
+            <i data-lucide="file-down" class="w-4 h-4 text-emerald-400"></i>
+            <span>View / Download CV</span>
+          </a>
+
+          <a href="https://wa.me/917490810349?text=Hi%20Ruchit,%20I%20am%20interested%20in%20your%20Shopify%20Development%20services." target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl font-semibold text-sm text-emerald-300 hover:text-emerald-200 bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-500/30 flex items-center gap-2 transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>WhatsApp Quick Chat</span>
+          </a>
+        </div>
+
+        <!-- Key Metrics Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-white mb-1 flex items-center justify-center gap-1">
+              <span class="gradient-text-emerald">11+</span>
+            </div>
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Live Stores Built</div>
+            <div class="text-[11px] text-emerald-400/80 mt-1">D2C, Fashion & Retail</div>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-white mb-1 flex items-center justify-center gap-1">
+              <span class="gradient-text-amber">6</span>
+            </div>
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Global Countries</div>
+            <div class="text-[11px] text-amber-400/80 mt-1">IN, US, CA, HK, DE, SK</div>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-white mb-1 flex items-center justify-center gap-1">
+              <span class="text-white">100%</span>
+            </div>
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Theme 2.0 & Liquid</div>
+            <div class="text-[11px] text-slate-400 mt-1">Custom Sections & Blocks</div>
+          </div>
+
+          <div class="glass-panel p-5 rounded-2xl text-center">
+            <div class="text-3xl font-extrabold text-white mb-1 flex items-center justify-center gap-1">
+              <span class="gradient-text-emerald">90+</span>
+            </div>
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Speed & SEO Mindset</div>
+            <div class="text-[11px] text-emerald-400/80 mt-1">Core Web Vitals Ready</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Infinite Category Marquee (Covering all 8 sectors from PDF) -->
+    <div class="mt-16 pt-6 border-y border-slate-800/80 bg-slate-950/40">
+      <div class="marquee-container">
+        <div class="marquee-content text-xs font-semibold uppercase tracking-wider text-slate-400">
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Wellness & Superfoods</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Fashion & Jewellery</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span> Home Fragrance & Decor</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Eyewear</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Notebooks & Stationery</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span> Kitchenware & Lifestyle</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> Travel & Experiences</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Ceramic Tableware</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Shopify Dawn & Horizon Theme Customization</span>
+        </div>
+        <div class="marquee-content text-xs font-semibold uppercase tracking-wider text-slate-400" aria-hidden="true">
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Wellness & Superfoods</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Fashion & Jewellery</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span> Home Fragrance & Decor</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Eyewear</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Notebooks & Stationery</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span> Kitchenware & Lifestyle</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> Travel & Experiences</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Ceramic Tableware</span>
+          <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Shopify Dawn & Horizon Theme Customization</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS SECTION (11 Live Stores) -->
+  <section id="projects" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>Project Index & Storefront Showcase</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            11 Live Shopify Storefronts
+          </h2>
+          <p class="text-slate-400 text-sm mt-1 max-w-2xl">
+            Direct-to-consumer and international retail clients built with custom Shopify OS 2.0 themes, Liquid blocks, and conversion-optimized checkouts.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span id="project-count-badge" class="px-3.5 py-1.5 rounded-xl bg-slate-800 text-xs font-bold text-emerald-400 border border-slate-700">
+            11 Live Projects
+          </span>
+        </div>
+      </div>
+
+      <!-- Filters & Live Search Bar -->
+      <div class="glass-panel p-4 rounded-2xl mb-10 flex flex-col lg:flex-row items-center justify-between gap-4">
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto">
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white border border-emerald-500 transition-all shadow-sm" data-filter="all">
+            All Projects (11)
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 border border-slate-700 hover:text-white transition-all" data-filter="india">
+            🇮🇳 India D2C (5)
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 border border-slate-700 hover:text-white transition-all" data-filter="international">
+            🌍 International (6)
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 border border-slate-700 hover:text-white transition-all" data-filter="fashion">
+            👗 Fashion & Jewellery
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 border border-slate-700 hover:text-white transition-all" data-filter="home">
+            🏡 Home & Living
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/60 text-slate-300 border border-slate-700 hover:text-white transition-all" data-filter="specialty">
+            ✨ Wellness & Specialty
+          </button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative w-full lg:w-72">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input 
+            type="text" 
+            id="project-search" 
+            placeholder="Search stores, brands, tech..."
+            class="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-900 border border-slate-700/80 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 transition-colors"
+          />
+        </div>
+      </div>
+
+      <!-- Dynamic Projects Grid (Rendered by app.js) -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SHOPIFY SKILLS & TECHNICAL TOOLKIT SECTION -->
+  <section id="skills" class="py-20 bg-slate-950/60 border-t border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+          <span>Technical Capabilities & Toolkit</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Shopify & Frontend Engineering Skills
+        </h2>
+        <p class="text-slate-400 text-sm mt-2">
+          Specialized technical proficiency honed through real-world commercial theme customizations, Liquid programming, and Figma-to-code implementation.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        
+        <!-- Pillar 1: Shopify OS 2.0 -->
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-5">
+            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Shopify OS 2.0 & Liquid</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Mastery of JSON templates, modular custom sections, schema configurations, and dynamic block rendering for merchant flexibility.
+          </p>
+          <div class="space-y-1.5 text-xs text-slate-300 font-medium">
+            <div class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Dawn & Horizon Theme Customization</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Liquid Logic & Conditional Tags</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Custom Sections & Schema Settings</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Cart Drawer (AJAX / Fetch API)</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> App Embeds & Block Integrations</div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Frontend Engineering -->
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center mb-5">
+            <i data-lucide="code" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Frontend Engineering</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Writing semantic, accessible, lightweight modern code engineered for lightning-fast e-commerce browsing speeds.
+          </p>
+          <div class="space-y-1.5 text-xs text-slate-300 font-medium">
+            <div class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> HTML5 & Modern Semantic Web</div>
+            <div class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> CSS3, Flexbox & CSS Grid</div>
+            <div class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> JavaScript (ES6+) & DOM APIs</div>
+            <div class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> Tailwind CSS & Bootstrap</div>
+            <div class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> jQuery & Interactive Micro-animations</div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: UI/UX & Design Tools -->
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-5">
+            <i data-lucide="figma" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Figma to Shopify</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Flawless 1:1 translation from designer mockups to interactive, pixel-perfect, fully responsive Shopify pages.
+          </p>
+          <div class="space-y-1.5 text-xs text-slate-300 font-medium">
+            <div class="flex items-center gap-2"><span class="text-purple-400 font-bold">✓</span> Figma Component Translation</div>
+            <div class="flex items-center gap-2"><span class="text-purple-400 font-bold">✓</span> Adobe XD & Sketch Workflows</div>
+            <div class="flex items-center gap-2"><span class="text-purple-400 font-bold">✓</span> Responsive Breakpoint Design</div>
+            <div class="flex items-center gap-2"><span class="text-purple-400 font-bold">✓</span> E-Commerce UX & Checkout Flow</div>
+            <div class="flex items-center gap-2"><span class="text-purple-400 font-bold">✓</span> Mobile-First Touch Interactions</div>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Performance & Dev Workflow -->
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-5">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Speed, SEO & Workflow</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            Auditing load times, eliminating bloat, implementing on-page SEO, and maintaining efficient Git workflows.
+          </p>
+          <div class="space-y-1.5 text-xs text-slate-300 font-medium">
+            <div class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Core Web Vitals Optimization</div>
+            <div class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> On-Page E-Commerce SEO</div>
+            <div class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> VS Code & Sublime Text</div>
+            <div class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> Git Version Control & GitHub</div>
+            <div class="flex items-center gap-2"><span class="text-amber-400 font-bold">✓</span> WordPress (Basic Knowledge)</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Spoken Languages & Regional Capability -->
+      <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-1 flex items-center gap-2">
+            <i data-lucide="languages" class="w-4 h-4 text-emerald-400"></i>
+            <span>Multilingual Communication & Global Collaboration</span>
+          </h4>
+          <p class="text-xs text-slate-400">
+            Fluent across cross-border teams, US/EU/HK international clients, and domestic D2C brands.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-200">
+            🇬🇧 English: <span class="text-emerald-400">Professional Working</span>
+          </span>
+          <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-200">
+            🇮🇳 Hindi: <span class="text-emerald-400">Fluent</span>
+          </span>
+          <span class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-200">
+            🇮🇳 Gujarati: <span class="text-emerald-400">Native</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CODE ARCHITECTURE & PLAYGROUND SECTION -->
+  <section id="code-showcase" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Explanation -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <i data-lucide="file-code" class="w-4 h-4"></i>
+            <span>Theme Architecture in Action</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            Clean, Modular Liquid Code Built for Merchants.
+          </h2>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            I don't just write static styles—I build flexible, merchant-editable Shopify 2.0 sections with intuitive JSON schemas so store managers can update banners, products, and messaging without touching code.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xs mt-0.5">1</div>
+              <div>
+                <h4 class="text-xs font-bold text-white">Dynamic Section Blocks & Presets</h4>
+                <p class="text-xs text-slate-400">Configured with presets allowing instant drag-and-drop insertion anywhere in the theme customizer.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xs mt-0.5">2</div>
+              <div>
+                <h4 class="text-xs font-bold text-white">Lightweight Ajax Add-to-Bag</h4>
+                <p class="text-xs text-slate-400">Vanilla JavaScript fetch requests without bulky third-party libraries, keeping your store blazing fast.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-xs mt-0.5">3</div>
+              <div>
+                <h4 class="text-xs font-bold text-white">Conditional Logic for Bespoke Orders</h4>
+                <p class="text-xs text-slate-400">Customized fields for engravings, custom sizing, and Made-to-Order lead times (as built for The House of Kundan).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>Explore Code Standards & Structure</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Code Viewer -->
+        <div class="lg:col-span-7">
+          <div class="code-window shadow-2xl shadow-black/80">
+            <!-- Code Header -->
+            <div class="code-window-header">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                <span id="code-filename" class="ml-3 font-mono text-xs text-slate-400">sections/custom-benefit-grid.liquid</span>
+              </div>
+              <button onclick="copyCodeSnippet()" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-[11px] font-mono text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                <i data-lucide="copy" class="w-3 h-3 text-emerald-400"></i>
+                <span>Copy Snippet</span>
+              </button>
+            </div>
+
+            <!-- Code Tabs -->
+            <div class="flex border-b border-slate-800 bg-slate-900/90 text-xs px-2 pt-2 gap-1 overflow-x-auto">
+              <button class="code-tab-btn px-3 py-1.5 rounded-t-lg font-mono text-xs font-semibold bg-emerald-500/20 text-emerald-400 border-t-2 border-emerald-500/40" data-code="liquid">
+                custom-benefit-grid.liquid
+              </button>
+              <button class="code-tab-btn px-3 py-1.5 rounded-t-lg font-mono text-xs font-semibold text-slate-400 hover:text-slate-200" data-code="ajax">
+                ajax-cart-drawer.js
+              </button>
+              <button class="code-tab-btn px-3 py-1.5 rounded-t-lg font-mono text-xs font-semibold text-slate-400 hover:text-slate-200" data-code="customizer">
+                made-to-order-logic.liquid
+              </button>
+            </div>
+
+            <!-- Code Body Display -->
+            <pre class="p-5 text-xs text-slate-300 leading-relaxed overflow-x-auto max-h-[460px]"><code id="code-snippet-display">{% comment %}
+  Custom Shopify OS 2.0 Feature Section
+  Author: Ruchit Radadiya (Shopify Frontend Developer)
+{% endcomment %}
+
+&lt;div class="custom-benefit-grid section-{{ section.id }}"&gt;
+  &lt;div class="container mx-auto px-4"&gt;
+    {% if section.settings.heading != blank %}
+      &lt;h2 class="section-title text-center"&gt;{{ section.settings.heading | escape }}&lt;/h2&gt;
+    {% endif %}
+
+    &lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6"&gt;
+      {% for block in section.blocks %}
+        &lt;div class="benefit-card p-6 rounded-xl" {{ block.shopify_attributes }}&gt;
+          {% if block.settings.icon_svg != blank %}
+            &lt;div class="benefit-icon mb-4"&gt;{{ block.settings.icon_svg }}&lt;/div&gt;
+          {% endif %}
+          &lt;h3 class="text-lg font-bold mb-2"&gt;{{ block.settings.title | escape }}&lt;/h3&gt;
+          &lt;p class="text-sm text-gray-600"&gt;{{ block.settings.description }}&lt;/p&gt;
+        &lt;/div&gt;
+      {% endfor %}
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+{% schema %}
+{
+  "name": "Custom Benefit Grid",
+  "tag": "section",
+  "class": "shopify-section-benefit-grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Why Choose Our Craft"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit Card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Handcrafted Quality" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Artisanally forged with pure metals." },
+        { "type": "html", "id": "icon_svg", "label": "SVG Icon" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Benefit Grid",
+      "blocks": [
+        { "type": "benefit" },
+        { "type": "benefit" },
+        { "type": "benefit" }
+      ]
+    }
+  ]
+}
+{% endschema %}</code></pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE & CV SECTION (Exact Details from PDF Resume) -->
+  <section id="experience" class="py-20 bg-slate-950/60 border-t border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
+            <i data-lucide="briefcase" class="w-4 h-4"></i>
+            <span>Professional Resume & Career History</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Work Experience & Background
+          </h2>
+          <p class="text-slate-400 text-sm mt-1">
+            Proven commercial track record designing, engineering, and launching Shopify e-commerce solutions.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="resume.html" target="_blank" class="btn-shine px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-950 flex items-center gap-2 transition-all">
+            <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+            <span>Open Dedicated CV Page</span>
+          </a>
+          <button onclick="window.print()" class="px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 border border-slate-700 flex items-center gap-2 transition-all">
+            <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+            <span>Print CV</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left: Profile Summary Card -->
+        <div class="lg:col-span-4 space-y-6">
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-400 flex items-center justify-center text-white font-extrabold text-2xl shadow-xl shadow-emerald-950">
+                RR
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">Ruchit Radadiya</h3>
+                <p class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Web Designer & Shopify Frontend Developer</p>
+                <p class="text-xs text-slate-400 mt-0.5">Gujarat, India · Remote Global</p>
+              </div>
+            </div>
+
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+              <i data-lucide="award" class="w-3.5 h-3.5"></i>
+              <span>2.7+ Years Specialized Experience</span>
+            </div>
+
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Creative and detail-oriented Shopify Frontend Designer with 2.7 years of hands-on experience in Horizon and Dawn theme customization. Skilled in Liquid, HTML, CSS, and JavaScript, delivering responsive, conversion-focused Shopify stores.
+            </p>
+
+            <div class="space-y-3 pt-4 border-t border-slate-800/80 text-xs">
+              <div class="flex items-center justify-between py-1 border-b border-slate-800/40">
+                <span class="text-slate-400">Email</span>
+                <span class="font-medium text-slate-200 cursor-pointer hover:text-emerald-400 flex items-center gap-1" onclick="copyToClipboard('ruchitradadiya123@gmail.com', 'Email')">
+                  ruchitradadiya123@gmail.com <i data-lucide="copy" class="w-3 h-3 text-slate-500"></i>
+                </span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-slate-800/40">
+                <span class="text-slate-400">Phone</span>
+                <span class="font-medium text-slate-200 cursor-pointer hover:text-emerald-400 flex items-center gap-1" onclick="copyToClipboard('+917490810349', 'Phone')">
+                  (+91) 74908 10349 <i data-lucide="copy" class="w-3 h-3 text-slate-500"></i>
+                </span>
+              </div>
+              <div class="flex items-center justify-between py-1">
+                <span class="text-slate-400">LinkedIn</span>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="font-medium text-emerald-400 hover:underline flex items-center gap-1">
+                  linkedin.com <i data-lucide="external-link" class="w-3 h-3"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Card -->
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-2">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+              <span>Education</span>
+            </h4>
+            <div class="border-l-2 border-amber-500/40 pl-4 py-1">
+              <h5 class="text-sm font-bold text-white">BSc (Microbiology)</h5>
+              <p class="text-xs text-slate-300 font-medium">Gujarat University</p>
+              <p class="text-xs text-slate-500 mt-1">2019 – 2021</p>
+            </div>
+          </div>
+
+          <!-- Tools Stack -->
+          <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
+              <i data-lucide="wrench" class="w-4 h-4 text-emerald-400"></i>
+              <span>Development Tools</span>
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-xs font-medium text-slate-300 border border-slate-700">Sublime Text</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-xs font-medium text-slate-300 border border-slate-700">VS Code</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-xs font-medium text-slate-300 border border-slate-700">Figma</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-xs font-medium text-slate-300 border border-slate-700">Adobe XD</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-xs font-medium text-slate-300 border border-slate-700">Sketch</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-900 text-xs font-medium text-slate-300 border border-slate-700">Git</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Career Timeline -->
+        <div class="lg:col-span-8 space-y-6">
+          
+          <!-- Experience Item 1: Tech Rabbit -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 relative hover:border-emerald-500/30 transition-all">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[11px] font-bold uppercase tracking-wider">
+                  Current Role
+                </span>
+                <h3 class="text-xl font-bold text-white mt-1">Tech Rabbit</h3>
+                <p class="text-sm font-semibold text-emerald-400">Shopify Frontend Developer</p>
+              </div>
+              <div class="text-xs font-mono font-medium text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800 self-start sm:self-center">
+                Oct 2025 – Present
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Spearheading Shopify theme customization and custom section architecture for high-growth direct-to-consumer and international e-commerce merchants.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Engineering custom Shopify sections and modular blocks with flexible schema settings for seamless client updates.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Customizing Dawn and Horizon themes with high-performance CSS and lightweight JavaScript components.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Building conversion-focused UI components such as slide-out Ajax cart drawers, sticky add-to-cart, and custom filtering.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Performing speed audits and Core Web Vitals optimization to reduce bounce rates on mobile devices.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Experience Item 2: Tsomo Spring Solutions -->
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 relative hover:border-emerald-500/30 transition-all">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-bold uppercase tracking-wider">
+                  Full-Time Experience
+                </span>
+                <h3 class="text-xl font-bold text-white mt-1">Tsomo Spring Solutions</h3>
+                <p class="text-sm font-semibold text-slate-300">Shopify Frontend Developer & Web Designer</p>
+              </div>
+              <div class="text-xs font-mono font-medium text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-800 self-start sm:self-center">
+                Apr 2024 – Oct 2025
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Led UI/UX design translations and theme development across numerous commercial e-commerce storefronts, delivering responsive web solutions.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Created visually appealing UI/UX layouts, ensuring an intuitive, user-friendly customer experience.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Developed custom Shopify sections and blocks using Liquid, HTML, CSS, and JavaScript.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Converted Figma, Adobe XD, or Sketch designs into fully functional, pixel-perfect web pages.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Optimized website performance by improving load times and adhering to SEO best practices.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-emerald-400 font-bold mt-0.5">✔</span>
+                <span>Collaborated directly with developers and marketing teams to enhance user engagement and conversion rates.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MY 4-STEP WORKFLOW / PROCESS -->
+  <section id="process" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
+          <i data-lucide="check-circle" class="w-4 h-4"></i>
+          <span>Proven Delivery Process</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          How I Build Successful Stores
+        </h2>
+        <p class="text-slate-400 text-sm mt-2">
+          A systematic approach ensuring clean code, design fidelity, zero merchant downtime, and fast store speeds.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="glass-panel p-6 rounded-2xl relative">
+          <div class="text-4xl font-black text-slate-800 mb-3 font-mono">01</div>
+          <h3 class="text-base font-bold text-white mb-2">Design Review & Architecture</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Analyzing Figma/XD mockups, breaking designs down into reusable sections and blocks, and planning schema controls.
+          </p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl relative">
+          <div class="text-4xl font-black text-slate-800 mb-3 font-mono">02</div>
+          <h3 class="text-base font-bold text-white mb-2">Clean Liquid Development</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Writing modular Liquid markup, CSS, and JavaScript. Ensuring full compatibility with Shopify OS 2.0 theme standards.
+          </p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl relative">
+          <div class="text-4xl font-black text-slate-800 mb-3 font-mono">03</div>
+          <h3 class="text-base font-bold text-white mb-2">Mobile & Speed QA</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Thorough cross-device testing across iOS and Android, asset minification, image lazy-loading, and Lighthouse speed auditing.
+          </p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl relative">
+          <div class="text-4xl font-black text-slate-800 mb-3 font-mono">04</div>
+          <h3 class="text-base font-bold text-white mb-2">Live Storefront Launch</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Publishing to live domain, verifying payment gateways and checkout flows, and providing handover support to the merchant.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT & HIRE ME SECTION -->
+  <section id="contact" class="py-20 bg-slate-950/80 border-t border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Contact Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Get in Touch</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            Ready to Build or Elevate Your Shopify Store?
+          </h2>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Whether you need a full custom Shopify 2.0 build from Figma, custom Liquid sections, speed optimization, or are hiring for a frontend developer role—let's discuss your project.
+          </p>
+
+          <!-- Quick Action Cards -->
+          <div class="space-y-3 pt-2">
+            
+            <!-- Email Item -->
+            <div class="glass-panel p-4 rounded-xl flex items-center justify-between cursor-pointer group hover:border-emerald-500/50 transition-all" onclick="copyToClipboard('ruchitradadiya123@gmail.com', 'Email Address')">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-[11px] text-slate-400 uppercase font-semibold">Direct Email</div>
+                  <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">ruchitradadiya123@gmail.com</div>
+                </div>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 group-hover:bg-emerald-600 group-hover:text-white transition-all flex items-center gap-1">
+                <i data-lucide="copy" class="w-3 h-3"></i> Copy
+              </span>
+            </div>
+
+            <!-- Phone / WhatsApp Item -->
+            <div class="glass-panel p-4 rounded-xl flex items-center justify-between cursor-pointer group hover:border-emerald-500/50 transition-all" onclick="copyToClipboard('+917490810349', 'Phone Number')">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-[11px] text-slate-400 uppercase font-semibold">Direct Phone / Call</div>
+                  <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">(+91) 74908 10349</div>
+                </div>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 group-hover:bg-emerald-600 group-hover:text-white transition-all flex items-center gap-1">
+                <i data-lucide="copy" class="w-3 h-3"></i> Copy
+              </span>
+            </div>
+
+            <!-- WhatsApp Direct Button -->
+            <a href="https://wa.me/917490810349?text=Hi%20Ruchit,%20I%20saw%20your%20Shopify%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="btn-shine w-full p-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-teal-600 text-white font-bold text-sm flex items-center justify-between shadow-lg shadow-emerald-950 transition-all">
+              <div class="flex items-center gap-3">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Open Instant WhatsApp Chat</span>
+              </div>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800">
+            <h3 class="text-xl font-bold text-white mb-2">Send an Inquiry or Project Brief</h3>
+            <p class="text-xs text-slate-400 mb-6">Fill in details below to generate a pre-drafted message directly to Ruchit.</p>
+
+            <form id="contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Name</label>
+                  <input 
+                    type="text" 
+                    id="sender-name" 
+                    required 
+                    placeholder="e.g. John Doe"
+                    class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Email</label>
+                  <input 
+                    type="email" 
+                    id="sender-email" 
+                    required 
+                    placeholder="e.g. john@brand.com"
+                    class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">What are you looking to build?</label>
+                <select id="service-type" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors">
+                  <option value="New Shopify OS 2.0 Store Build">New Custom Shopify Store Build (Figma to Shopify)</option>
+                  <option value="Custom Liquid Sections / Feature">Custom Liquid Sections & Reusable Blocks</option>
+                  <option value="Theme Redesign & Dawn/Horizon Customization">Dawn / Horizon Theme Customization</option>
+                  <option value="Storefront Speed & SEO Optimization">Speed Optimization & Core Web Vitals</option>
+                  <option value="Full-Time / Contract Frontend Role">Frontend Developer Full-Time / Contract Role</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Project Details or Requirements</label>
+                <textarea 
+                  id="sender-message" 
+                  rows="4" 
+                  required
+                  placeholder="Share details about your brand, current Shopify store link, timeline, or specific custom features required..."
+                  class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors"
+                ></textarea>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="space-y-3 pt-2">
+                <button type="submit" class="btn-shine w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 font-bold text-sm text-white shadow-xl shadow-emerald-950 flex items-center justify-center gap-2 transition-all">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Send Project Inquiry</span>
+                </button>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <button type="button" onclick="sendViaWhatsApp()" class="py-2.5 px-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/40 text-emerald-300 font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                    <span>Send via WhatsApp</span>
+                  </button>
+
+                  <button type="button" onclick="sendViaGmail()" class="py-2.5 px-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+                    <i data-lucide="mail" class="w-4 h-4 text-rose-400"></i>
+                    <span>Open in Gmail (Web)</span>
+                  </button>
+                </div>
+
+                <div class="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+                  <span class="flex items-center gap-1">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    Direct connection to Ruchit
+                  </span>
+                  <button type="button" onclick="copyFormMessage()" class="text-slate-400 hover:text-emerald-400 font-medium flex items-center gap-1 transition-colors">
+                    <i data-lucide="copy" class="w-3 h-3"></i> Copy Message Text
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-slate-800 bg-[#090d16] text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-extrabold text-sm">
+          RR
+        </div>
+        <div>
+          <span class="font-bold text-white text-sm">Ruchit Radadiya</span>
+          <span class="block text-[11px] text-slate-500">Shopify Theme Developer · Custom Sections & Blocks</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 text-xs font-medium">
+        <a href="#hero" class="hover:text-emerald-400 transition-colors">Home</a>
+        <a href="#projects" class="hover:text-emerald-400 transition-colors">11 Live Stores</a>
+        <a href="#skills" class="hover:text-emerald-400 transition-colors">Technical Skills</a>
+        <a href="resume.html" target="_blank" class="hover:text-emerald-400 transition-colors">Resume</a>
+        <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+      </div>
+
+      <div class="text-center md:text-right">
+        <p>© 2026 Ruchit Radadiya. All rights reserved.</p>
+        <p class="text-[11px] text-slate-500 mt-0.5">Built with modern HTML5, Tailwind CSS & Liquid Theme Architecture.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- PROJECT DETAIL MODAL (Overlay) -->
+  <div id="project-modal" class="modal-overlay fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-container w-full max-w-2xl bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden relative">
+      <!-- Close Button -->
+      <button onclick="closeProjectModal()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Dynamic Content Injection Container -->
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- INQUIRY DISPATCH MODAL -->
+  <div id="inquiry-modal" class="modal-overlay fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-container w-full max-w-lg bg-slate-900 rounded-3xl border border-slate-800 shadow-2xl overflow-hidden relative p-6 sm:p-8">
+      <button onclick="closeInquiryModal()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-center mb-5">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-1">Your Inquiry is Ready!</h3>
+        <p class="text-xs text-slate-400">Choose how you would like to connect with Ruchit Radadiya:</p>
+      </div>
+
+      <!-- Message Preview Box -->
+      <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 mb-5 font-mono text-[11px] text-slate-300 max-h-32 overflow-y-auto leading-relaxed" id="modal-inquiry-preview">
+        <!-- Injected by JS -->
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="space-y-2.5">
+        <button onclick="dispatchWhatsApp()" class="btn-shine w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-950 transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Send via WhatsApp (Instant Reply)</span>
+        </button>
+
+        <button onclick="dispatchGmail()" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+          <i data-lucide="mail" class="w-4 h-4 text-rose-400"></i>
+          <span>Open in Gmail (Web Browser)</span>
+        </button>
+
+        <button onclick="dispatchMailto()" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs flex items-center justify-center gap-2 transition-all">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>Open in Default Mail App</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="flex items-center gap-3 px-5 py-3 rounded-2xl bg-slate-900 border border-emerald-500/50 text-white text-xs font-semibold shadow-2xl shadow-emerald-950/50">
+    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toast-msg">Copied to clipboard!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/projects-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
+
